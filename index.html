@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es" style="scroll-behavior: smooth;">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Matita v3.1 - Boutique Literaria</title>
+    <link rel="icon" type="image/png" href="https://i.ibb.co/nN1YJp9g/logo2.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/segoe-print" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        matita: {
+                            orange: '#f6a118',
+                            yellow: '#fadb31',
+                            pink: '#ea7e9c',
+                            hotPink: '#ff597b',
+                            beige: '#f9f7f2',
+                            cream: '#fff8e7',
+                            softPink: '#fde2e4',
+                            darkGreen: '#0a3d31',
+                            gold: '#c5a35d',
+                            grey: '#7d7d7d',
+                            brightYellow: '#ffe066'
+                        }
+                    },
+                    backgroundImage: {
+                        'gradient-primary': 'linear-gradient(90deg, #f6a118, #fadb31)',
+                        'gradient-secondary': 'linear-gradient(90deg, #ea7e9c, #fadb31)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        :root {
+            --matita-orange: #f6a118;
+            --matita-yellow: #fadb31;
+            --matita-pink: #ea7e9c;
+            --matita-dark-green: #0a3d31;
+            --matita-gold: #c5a35d;
+            --matita-beige: #f9f7f2;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--matita-beige);
+            color: var(--matita-dark-green);
+            margin: 0;
+            min-height: 100vh;
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, .serif {
+            font-family: 'Playfair Display', serif;
+            color: var(--matita-dark-green);
+        }
+
+        /* Estilo Admin - Prioridad por instrucción */
+        .admin-font {
+            font-family: 'Segoe Print', 'Comic Sans MS', cursive, sans-serif !important;
+        }
+
+        /* Botones Principales */
+        .btn-matita-primary {
+            background: linear-gradient(90deg, var(--matita-orange), var(--matita-yellow));
+            color: white;
+            border-radius: 40px;
+            padding: 10px 24px;
+            transition: all 0.3s ease;
+            box-shadow: 0px 4px 12px rgba(0,0,0,0.08);
+            font-weight: 600;
+        }
+
+        .btn-matita-primary:hover {
+            transform: translateY(-2px);
+            filter: brightness(1.05);
+            box-shadow: 0px 6px 15px rgba(246, 161, 24, 0.2);
+        }
+
+        /* Botones Secundarios / Checkboxes */
+        .btn-matita-secondary {
+            background: linear-gradient(90deg, var(--matita-pink), var(--matita-yellow));
+            color: white;
+            border-radius: 40px;
+            padding: 10px 24px;
+            transition: all 0.3s ease;
+        }
+
+        /* Inputs Premium */
+        input, select, textarea {
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 8px 12px;
+            transition: all 0.3s ease;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: var(--matita-gold);
+            box-shadow: 0 0 0 2px rgba(197, 163, 93, 0.2);
+        }
+
+        /* Scrollbar Personalizada */
+        ::-webkit-scrollbar { width: 5px; }
+        ::-webkit-scrollbar-track { background: var(--matita-beige); }
+        ::-webkit-scrollbar-thumb { background: var(--matita-gold); border-radius: 10px; }
+
+        .animate-fade-in {
+            animation: fadeIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(15px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+
+<script type="importmap">
+{
+  "imports": {
+    "@google/genai": "https://esm.sh/@google/genai@^1.38.0",
+    "@supabase/supabase-js": "https://esm.sh/@supabase/supabase-js@^2.91.1",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3"
+  }
+}
+</script>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="module" src="index.tsx"></script>
+</body>
+</html>
